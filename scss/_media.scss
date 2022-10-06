@@ -1,0 +1,237 @@
+@media (max-width: 1600px){
+    .index{
+        &__inner{
+            padding: 0px 100px;
+        }
+
+        &__center{
+            &-img{
+                height: 776px;
+            }
+        }
+
+        &__right{
+            margin-top: 141px;
+        }
+
+        &__about{
+            &-line1,
+            &-line2,
+            &-line3,
+            &-line4,
+            &-line5,
+            &-line6,
+            &-line7{ 
+                z-index: -1;
+            }
+            &-line1{
+                top: 200px;
+            }
+
+            &-line2{
+                top: 400px;
+            }
+
+            &-line3{
+                top: 550px;
+                p{
+                    bottom: -100px;
+                }
+            }
+
+            &-line4,
+            &-line5,
+            &-line6,
+            &-line7{
+                right: 80px;
+            }
+
+            &-line4{
+                top: 200px;
+                right: 270px;
+                p{
+                    left: 190px;
+                }
+            }
+
+            &-line5{
+                top: 400px;
+            }
+
+            &-line6{
+                top: 500px;
+            }
+
+            &-line7{
+                top: 600px;
+                p{
+                    top: 90px;
+                    left: 130px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1440px){
+    .index{
+        &__text{
+            font-size: 20px;
+        }
+
+        &__title{
+            font-size: 100px;
+            line-height: 70px;
+        }
+
+        &__about{
+            @include fontSizeLine(16px);
+
+            @include line('1', 288px, -59px, 485px);
+            @include line('2', 467px, -59px, 336px);
+            @include line('3', 489px, -59px, 485px);
+            @include line('4', 213px, -572px, 314px, 157px);
+            @include line('5', 393px, -495px, 353px);
+            @include line('6', 494px, -490px, 327px);
+            @include line('7', 599px, -513px, 358px, 88px, 59px);
+        }
+    }
+
+    .partners{
+        &__inner{
+            padding: 85px 134px 0px;
+        }
+        &__img{
+            margin-right: 9px;
+        }
+    }
+}
+
+@media (max-width: 1366px){
+    .index{
+        &__title{
+            font-size: 70px;
+            line-height: 45px;
+        }
+
+        &__left{
+            &-list{
+                margin-top: 100px;
+            }
+            &-item{
+                font-size: 22px;
+            }
+            &-item:not(:last-of-type){
+                margin-bottom: 30px;
+            }
+        }
+
+        &__center{
+            &-img{
+                height: 600px;
+            }
+        }
+
+        &__right{
+            &-item{
+                font-size: 24px;
+                &:not(:last-of-type){
+                    margin-bottom: 30px;
+                }
+            }
+        }
+
+        &__link{
+            &-text{
+                font-size: 20px;
+            }
+        }
+
+        &__line{
+            &-link{
+                font-size: 24px;
+            }
+        }
+
+        &__about{
+            @include line('1', 200px, -32px, 425px);
+            @include line('2', 387px, 50px, 312px);
+            @include line('3', 463px, 15px, 369px, 0, 0, -71px);
+            @include line('4', 213px, -572px, 252px, 105px);
+            @include line('5', 333px, -495px, 357px);
+            @include line('6', 425px, -499px, 327px);
+            @include line('7', 499px, -529px, 358px, 88px, 59px);
+        }
+    }
+
+    .reviews{
+        &__title{
+            font-size: 90px;
+            margin-right: 198px;
+        }
+
+        &__left{
+            &-item{
+                font-size: 14px;
+            }
+        }
+    }
+
+    .partners{
+        &__inner{
+            padding: 40px 134px 0px;
+        }
+
+        &__title{
+            font-size: 100px;
+        }
+    }
+}
+
+@media (max-width: 1280px){
+    .index{
+        &__title{
+            font-size: 90px;
+        }
+
+        &__right{
+            margin-top: 100px;
+        }
+
+        &__text{
+            font-size: 18px;
+        }
+
+        &__left{
+            &-list{
+                margin-top: 75px;
+            }
+        }
+
+        &__about{
+            @include line('2', 336px, 20px, 312px);
+            @include line('4', 153px, -522px, 252px, 105px);
+            @include line('5', 270px, -460px, 357px);
+            @include line('6', 369px, -462px, 327px);
+            @include line('7', 459px, -478px, 358px, 88px, 59px);
+        }
+    }
+
+    .partners{
+        &__inner{
+            padding: 40px 103px 0px;
+        }
+        &__title{
+            margin-bottom: 51px;
+        }
+    }
+
+    .articles{
+        &__content{
+            &-description{
+                font-size: 10px;
+                line-height: 18px;
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+@import 'mixins';
+/* Ресет */
+@import 'reset';
+/* Шрифты */
+@import 'fonts';
+@import 'vars';
+/* Библеотеки */
+@import 'libs';
+/* Глобальное */
+@import 'global';
+/* Анимации */
+@import 'animation';
+
+/* Оснвоное */
+@import 'main';
+
+/* Адаптация */
+@import 'media';

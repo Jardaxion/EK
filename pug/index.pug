@@ -1,0 +1,52 @@
+extends  ./template/layout
+block content
+    section.index
+        .index__inner
+            img.index__background(src="img/index/background.png", alt="Задний фон")
+            .index__content
+                .index__left
+                    h1.index__title Евгений <br> Корчагин
+                    p.index__text Ведуущий для значимых событий
+                    ul.index__left-list
+                        each val in ["Давайте знакомится", "Соц. сети", "Написать в WhatsApp"]
+                            li.index__left-item 
+                                a.index__left-link.underline(href="#")= val
+                .index__about-left
+                    h3.index__title Обо мне
+                    .index__about-content
+                        .index__about-line1
+                            p 11 лет в профессии с 2009 года.
+                            img(src="img/index/line/line1.svg", alt="1")
+                        .index__about-line2
+                            p 2 высших образования
+                            img(src="img/index/line/line2.svg", alt="1")
+                        .index__about-line3
+                            p 3 место TOP GORKO SOCHI 2017 г.
+                            img(src="img/index/line/line3.svg", alt="1")
+                .index__center
+                    img.index__center-img(src="img/index/man.png", alt="")
+                    .index__center-effect
+                .index__about-right
+                    .index__about-line4
+                        p 6 ролей в кино
+                        img(src="img/index/line/line4.svg", alt="1")
+                    .index__about-line5
+                        p 3500 гостей на одном мероприятии
+                        img(src="img/index/line/line2.svg", alt="1")
+                    .index__about-line6
+                        p 69 авто разыграл в казино
+                        img(src="img/index/line/line2.svg", alt="1")
+                    .index__about-line7
+                        p 172 свадеб на конец 2020г.
+                        img(src="img/index/line/line5.svg", alt="1")
+                .index__right
+                    ul.index__right-list
+                        each text, link in {'portfolio.html':'Профтолио', 'reviews.html':'Отзывы', 'articles.html':'Статьи', 'contacs.html':'Контакты'}
+                            li.index__right-item
+                                a.index__right-link(href=link)= text
+                    a.index__link(href="")
+                        img.index__link-img(src="img/phone.png", alt="")
+                        span.index__link-text  8 (800) 888-88-88
+                    .index__line
+                        each val in ['WhatsApp', 'Email']
+                            a.index__line-link(href="")= val 

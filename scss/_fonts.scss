@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'signpainter_housescript';
+    src: url('../fonts/signpainter_housescript.eot');
+    src: url('../fonts/signpainter_housescript.eot') format('embedded-opentype'),
+         url('../fonts/signpainter_housescript.woff2') format('woff2'),
+         url('../fonts/signpainter_housescript.woff') format('woff'),
+         url('../fonts/signpainter_housescript.ttf') format('truetype'),
+         url('../fonts/signpainter_housescript.svg#signpainter_housescript') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Miami';
+    src: url('../fonts/Miami.eot');
+    src: url('../fonts/Miami.eot') format('embedded-opentype'),
+         url('../fonts/Miami.woff2') format('woff2'),
+         url('../fonts/Miami.woff') format('woff'),
+         url('../fonts/Miami.ttf') format('truetype'),
+         url('../fonts/Miami.svg#Miami') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Mazzard';
+    src: url('../fonts/MazzardMBold.eot');
+    src: url('../fonts/MazzardMBold.eot') format('embedded-opentype'),
+         url('../fonts/MazzardMBold.woff2') format('woff2'),
+         url('../fonts/MazzardMBold.woff') format('woff'),
+         url('../fonts/MazzardMBold.ttf') format('truetype'),
+         url('../fonts/MazzardMBold.svg#MazzardMBold') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+	font-family: 'GothamPro';
+	src: local("GothamPro Regular"), local("GothamPro-Regular"), url("../fonts/GothamPro.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GothamPro';
+	src: local("GothamPro Light"), local("GothamPro-Light"), url("../fonts/GothamPro-Light.woff2") format("woff2");
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GothamPro';
+	src: local("GothamPro Medium"), local("GothamPro-Medium"), url("../fonts/GothamPro-Medium.woff2") format("woff2");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GothamPro';
+	src: local("GothamPro Bold"), local("GothamPro-Bold"), url("../fonts/GothamPro-Bold.woff2") format("woff2");
+	font-weight: 600;
+	font-style: normal;
+}

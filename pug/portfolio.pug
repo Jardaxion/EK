@@ -1,0 +1,21 @@
+extends  ./template/layout
+block content
+    section.gallery
+        .gallery__inner
+            .gallery__left
+                - for (let i = 1; i <= 5; i++)
+                    - let path = "img/portfolio/"+i+".png"
+                    - let classP = 'img' + i
+                    img.gallery__img(class=classP, src=path, alt="Пример")
+            .gallery__right
+                img.gallery__img(src="img/portfolio/6.png", alt="")
+    section.nav
+        .nav__inner
+            ul.nav__list
+                each text, link in {'portfolio': 'Портфолио', 'reviews': 'Отзывы', 'articles': 'Статьи', 'contacs': 'Контакты'}
+                    li.nav__item
+                        - link = link + '.html'
+                        if text == 'Портфолио'
+                            a.nav__item.select(href=link)= text
+                        else
+                            a.nav__item(href=link)= text

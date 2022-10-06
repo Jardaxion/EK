@@ -1,0 +1,118 @@
+.reviews{
+    @include customBack;
+    &__background{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        transform: scale(1.1);
+    }
+
+    &__content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        @include absoluteCenter();
+        &-left{
+            max-width: 563px;
+            margin-right: 45px;
+        }
+        &-right{
+            width: 385px!important;
+        }
+    }
+
+    &__leftArrow,
+    &__rightArrow{
+        cursor: pointer;
+        path{
+            transition: .3s all;
+        }
+
+        &:hover path{
+            fill: #D98C49;
+        }
+    }
+
+    &__leftArrow{
+        margin-right: 35px;
+    }
+
+    &__left{
+        margin-right: 45px;
+        &-top{
+            display: flex;
+            align-items: center;
+        }
+
+        &-content{
+            margin-top: 65px;
+            position: relative;
+        }
+
+        &-background{
+            position: absolute;
+        }
+
+        &-item{
+            padding: 15px 0px 0px 15px;
+            color: white;
+            height: 249px;
+            overflow-y: scroll;
+            font-family: 'Montserrat';
+            font-style: italic;
+            &::-webkit-scrollbar{
+                height: 0;
+                width: 0;
+            }
+        }
+    }
+
+    &__title{
+        color: white;
+        @include title;
+        position: relative;
+        margin-right: 95px;
+        &::after{
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 62px;
+            background: #F6A967;
+            bottom: -21px;
+            left: 0;
+        }
+    }
+
+    &__right{
+        &-box{
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        &-name{
+            color: white;
+            font-family: 'Montserrat';
+            font-weight: 700;
+            margin-right: 10px;
+        }
+
+        &-social::before{
+            content: '';
+            height: 0;
+        }
+    }
+
+    &__item{
+        &-img{
+            border-radius: 9px;
+            max-width: 381px;
+            max-height: 379px;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

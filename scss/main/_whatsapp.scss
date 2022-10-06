@@ -1,0 +1,42 @@
+.whatsapp{
+    position: fixed;
+    z-index: 2;
+    bottom: 41px;
+    width: 280px;
+    transition: .3s all;
+    cursor: default;
+    overflow:visible;
+    &::before{
+        content: '';
+        display: none;
+    }
+    *{
+        transition: .3s all;
+    }
+    &__inner{
+        background: black;
+        border-radius: 0px 41.5px 41.5px 0px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        padding: 16px 22px;
+        transform: translateX(-233px);
+        cursor: pointer;
+        &:hover{
+            transform: translateX(0);
+            background: #3C8143;
+            .whatsapp__text{
+                opacity: 1;
+            }
+        }
+    }
+
+    &__text{
+        font-family: 'Mazzard';
+        font-size: 20px;
+        margin-right: 22px;
+        color: white;
+        opacity: 0;
+    }
+}

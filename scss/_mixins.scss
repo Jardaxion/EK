@@ -1,0 +1,66 @@
+@mixin line($number, $top, $right, $img, $left: 0, $topP: 0, $bottom: 0){
+    &-line#{$number}{
+        top: $top;
+        left: $right;
+        img{
+            width: $img;
+        }
+
+        @if $left != 0{
+            p{
+                left: $left;
+            }
+        }
+
+        @if $topP != 0{
+            p{
+                top: $topP;
+            }
+        }
+
+        @if $bottom != 0{
+            p{
+                bottom: $bottom;
+            }
+        }
+    }
+}
+
+@mixin fontSizeLine($fontSize){
+    @for $i from 1 through 7{
+        &-line#{$i} p{
+            font-size: $fontSize;
+        }
+    }
+}
+
+@mixin gallery($number, $width){
+    &#{$number}{
+        width: $width;
+    }
+}
+
+@mixin customBack(){
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+@mixin absoluteCenter(){
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin title(){
+    font-size: 128px;
+    font-family: 'signpainter_housescript';
+}
+
+@mixin grid($columnS, $columnE, $rowS, $rowE){
+    grid-row-start: $columnS;
+    grid-row-end: $columnE;
+    grid-column-start: $rowS;
+    grid-column-end: $rowE;
+}

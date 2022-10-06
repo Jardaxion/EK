@@ -1,0 +1,233 @@
+.index{
+    @include customBack();
+    &__inner{
+        padding: 0px 165px;
+    }
+    &__background{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        filter: blur(7.5px);
+        transform: scale(1.1);
+        z-index: -1;
+        pointer-events: none;
+        transition: .6s ease all;
+        &.active{
+            transform: scale(1.2);
+        }
+    }
+
+    &__content{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title{
+        font-family: 'signpainter_housescript';
+        color: white;
+        font-size: 120px;
+        font-weight: 400;
+        margin-top: 78px;
+        line-height: 83px;
+    }
+
+    &__text{
+        font-family: 'Miami';
+        font-size: 24px;
+        color: white;
+        font-style: italic;
+        text-transform: uppercase;
+        margin-top: 58px;
+    }
+
+    &__left{
+        transition: .4s all;
+        &-list{
+            margin-top: 127px;
+        }
+        &-item{
+            font-size: 24px;
+        }
+        &-item:not(:last-of-type){
+            margin-bottom: 50px;
+        }
+        &.disactive{
+            position: absolute;
+            transform: translateY(100px);
+            opacity: 0;
+        }
+    }
+
+    &__left,
+    &__right{
+        position: relative;
+        z-index: 2;
+    }
+
+    &__center{
+        position: absolute;
+        transform: translateX(-50%);
+        left: 50%;
+        bottom: -16px;
+        &-img{
+            position: relative;
+            z-index: 2;
+        }
+        &-effect{
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            width: 721px;
+            height: 721px;
+            background: rgba(255, 255, 255, 0.29);
+            filter: blur(150px);
+            z-index: 1;
+            opacity: 0;
+            transition: 1s all;
+        }
+        &:hover{
+            .index__center-effect{
+                opacity: 1;
+            }
+        }
+    }
+
+    &__about{
+        &-left{
+            opacity: 0;
+            transform: translateX(-100px);
+            user-select: none;
+            transition: .4s all;
+            position: absolute;
+            &.active{
+                opacity: 1;
+                transform: translateX(0);
+                position: static;
+            }
+        }
+
+        &-right{
+            opacity: 0;
+            transform: translateX(100px);
+            user-select: none;
+            transition: .4s all;
+            position: absolute;
+            right: 0;
+            &.active{
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        &-line1,
+        &-line2,
+        &-line3,
+        &-line4,
+        &-line5,
+        &-line6,
+        &-line7{
+            position: absolute;
+            p{
+                font-family: 'GothamPro';
+                font-size: 22px;
+                font-style: italic;
+                text-transform: uppercase;
+                color: white;
+                position: relative;
+                left: 2px;
+            }
+        }
+
+        &-line1{
+            top: 303px;
+        }
+
+        &-line2{
+            top: 557px;
+        }
+
+        &-line3{
+            top: 695px;
+            p{
+                bottom: -100px;
+            }
+        }
+
+        &-line4,
+        &-line5,
+        &-line6,
+        &-line7{
+            right: 200px;
+        }
+
+        &-line4{
+            top: 281px;
+            right: 320px;
+            p{
+                left: 190px;
+            }
+        }
+
+        &-line5{
+            top: 493px;
+        }
+
+        &-line6{
+            top: 633px;
+        }
+
+        &-line7{
+            top: 782px;
+            p{
+                top: 90px;
+                left: 130px;
+            }
+        }
+    }
+
+    &__right{
+        margin-top: 240px;
+        transition: .4s all;
+        &-item{
+            font-size: 36px;
+            text-align: right;
+            &:not(:last-of-type){
+                margin-bottom: 53px;
+            }
+        }
+
+        &.disactive{
+            position: relative;
+            transform: translateY(100px);
+            opacity: 0;
+        }
+    }
+
+    &__link{
+        display: flex;
+        align-items: center;
+        margin-top: 97px;
+        &::before{
+            content: '';
+            width: 0!important;
+        }
+        &-text{
+            font-family: 'GothamPro';
+            font-size: 24px;
+            margin-left: 22px;
+        }
+    }
+
+    &__line{
+        margin-top: 75px;
+        &-link{
+            font-size: 32px;
+            &:not(:last-of-type){
+                margin-right: 25px;
+            }
+        }
+    }
+}

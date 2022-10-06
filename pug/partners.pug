@@ -1,0 +1,9 @@
+extends  ./template/layout
+block content
+    section.partners
+        .partners__inner
+            p.partners__title Партенры
+            .partners__content
+                - for(let i = 1; i <= 11; i++)
+                    - let path = 'img/partners/'+i+'.png'
+                    img.partners__img(src=path, alt="")
