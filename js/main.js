@@ -73,10 +73,20 @@ $(document).ready(function () {
     $('.indexMobile__link').click(function (e) { 
         toggleMenu();
     });
+
+    if (window.addEventListener) {
+        // IE9, Chrome, Safari, Opera
+        window.addEventListener("mousewheel", scrollHorizontally, false);
+        // Firefox
+        window.addEventListener("DOMMouseScroll", scrollHorizontally, false);
+    } else {
+        // IE 6/7/8
+        window.attachEvent("onmousewheel", scrollHorizontally);
+    }
 });
 
 //Что происходил при скролле
-$(window).scroll(() => {
+$(window).scroll(function(e){
     sticky();
     allFunctions();
 });
@@ -87,11 +97,11 @@ function sticky(){
         'position': bool ? 'fixed' : 'absolute'
     });
 
-    if(bool){
-        $('.whatsapp__inner').addClass('active');
-    } else {
-        $('.whatsapp__inner').removeClass('active');
-    }
+    // if(bool){
+    //     $('.whatsapp__inner').addClass('active');
+    // } else {
+    //     $('.whatsapp__inner').removeClass('active');
+    // }
 }
 
 function visible (target) {
@@ -170,4 +180,12 @@ function toggleMenu(){
 
 }
 
+//Горизонтальный скролл
+function scrollHorizontally(e) {
+    e = window.event || e;
+    var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+    document.documentElement.scrollLeft -= (delta*200); // Multiplied by 40
+    document.body.scrollLeft -= (delta*200); // Multiplied by 40
+    e.preventDefault();
+}
 //# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbnNvbGUuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoibWFpbi5qcyIsInNvdXJjZXNDb250ZW50IjpbIiJdfQ==
