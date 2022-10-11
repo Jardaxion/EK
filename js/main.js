@@ -176,7 +176,7 @@ function toggleMenu(){
     $('.indexMobile__menuBtn').toggleClass('active');
 
     $('.indexMobile__top-bottom').fadeToggle();
-    $('.indexMobile__top-menu').fadeToggle();
+    $('.indexMobile__top-menu').fadeToggle().css('display', 'flex');
 
 }
 
