@@ -160,6 +160,7 @@ function allFunctions(){
 
 function toggleMenu(){
     $('section:not(.menuNotOff)').toggle();
+    $('.indexMobile__bottom').toggle();
     $('.index').hide();
     
     $('.indexMobile__menuBtn').toggleClass('active');
