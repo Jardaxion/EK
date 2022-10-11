@@ -117,7 +117,7 @@ function visible (target) {
             $('a.nav__item.select').removeClass('select');
 
             $('a.nav__item').each(function(){
-                $(this).addClass('#' + target.className === $(this).attr('href') ? 'select' : '');
+                $(this).addClass('#' + target.id === $(this).attr('href') ? 'select' : '');
             })
     }
 
