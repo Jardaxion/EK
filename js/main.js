@@ -184,8 +184,8 @@ function toggleMenu(){
 function scrollHorizontally(e) {
     e = window.event || e;
     var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-    document.documentElement.scrollLeft -= (delta*200); // Multiplied by 40
-    document.body.scrollLeft -= (delta*200); // Multiplied by 40
+    document.documentElement.scrollLeft -= (delta*300); // Multiplied by 40
+    document.body.scrollLeft -= (delta*300); // Multiplied by 40
     e.preventDefault();
 }
 //# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbnNvbGUuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoibWFpbi5qcyIsInNvdXJjZXNDb250ZW50IjpbIiJdfQ==
