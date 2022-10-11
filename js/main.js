@@ -1,4 +1,7 @@
-;;$(document).ready(function () {
+$(document).ready(function () {
+    sticky();
+    allFunctions();
+    
     //Index hover
     $('.index__center').hover(function(){
         $('.index__left').addClass('disactive');
@@ -24,14 +27,6 @@
     $('.gallery__right').width($(window).width()-$('.gallery__left').width());
     $('.gallery__right').height($('.gallery__left').height());
 
-    //Articles show and hide description
-    $('.article').hover(function(){
-        $(this).find('.articles__content-description').slideDown();
-    })
-    $('.article').mouseleave(function(){
-        $(this).find('.articles__content-description').slideUp();
-    })
-
     // Sliders
     //review
     $('.reviews__left-content').slick({
@@ -43,6 +38,7 @@
         fade: true,
         asNavFor: $('.reviews__content-right')
     })
+    //Img review
     $('.reviews__content-right').slick({
         slideToShow: 1,
         slideToScroll: 1,
@@ -52,5 +48,125 @@
         fade: true,
         asNavFor: $('.reviews__left-content')
     })
+    //Mobile reviews
+    $('.reviewsMobile__content-content').slick({
+        slideToShow: 1,
+        slideToScroll: 1,
+        dots: false,
+        prevArrow: $('.reviewsMobile__leftArrow'),
+        nextArrow: $('.reviewsMobile__rightArrow'),
+        fade: true
+    })
+    // auto select transform
+    document.querySelectorAll('.articles__item-content').forEach(function(el){
+        let height = el.children[1].offsetHeight;
+        height += 10;
+        el.style.transform = 'translateY('+height+'px)';
+    })
+
+    //Mobile menu
+    $('.indexMobile__menuBtn').click(function (e) { 
+        e.preventDefault();
+        
+        toggleMenu();
+    });
+    $('.indexMobile__link').click(function (e) { 
+        toggleMenu();
+    });
 });
+
+//Что происходил при скролле
+$(window).scroll(() => {
+    sticky();
+    allFunctions();
+});
+
+function sticky(){
+    let bool = $(window).scrollLeft() >= $(window).width();
+    $('.nav').css({
+        'position': bool ? 'fixed' : 'absolute'
+    });
+
+    if(bool){
+        $('.whatsapp__inner').addClass('active');
+    } else {
+        $('.whatsapp__inner').removeClass('active');
+    }
+}
+
+function visible (target) {
+    // Все позиции элемента
+    var targetPosition = {
+        top: window.pageYOffset + target.getBoundingClientRect().top,
+        left: window.pageXOffset + target.getBoundingClientRect().left,
+        right: window.pageXOffset + target.getBoundingClientRect().right,
+        bottom: window.pageYOffset + target.getBoundingClientRect().bottom
+    },
+    // Получаем позиции окна
+    windowPosition = {
+        top: window.pageYOffset,
+        left: window.pageXOffset,
+        right: window.pageXOffset + document.documentElement.clientWidth,
+        bottom: window.pageYOffset + document.documentElement.clientHeight
+    };
+  
+    if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
+        targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
+        targetPosition.right > windowPosition.left &&// Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
+        targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
+            $('a.nav__item.select').removeClass('select');
+
+            $('a.nav__item').each(function(){
+                $(this).addClass('#' + target.className === $(this).attr('href') ? 'select' : '');
+            })
+    }
+
+};
+
+function changeColor(target){
+    // Все позиции элемента
+    var targetPosition = {
+        top: window.pageYOffset + target.getBoundingClientRect().top,
+        left: window.pageXOffset + target.getBoundingClientRect().left,
+        right: window.pageXOffset + target.getBoundingClientRect().right,
+        bottom: window.pageYOffset + target.getBoundingClientRect().bottom
+    },
+    // Получаем позиции окна
+    windowPosition = {
+        top: window.pageYOffset,
+        left: window.pageXOffset,
+        right: window.pageXOffset + document.documentElement.clientWidth,
+        bottom: window.pageYOffset + document.documentElement.clientHeight
+    };
+  
+    if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
+        targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
+        targetPosition.right > windowPosition.left &&// Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
+        targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
+            $('.nav__item').addClass('black');
+    } else {
+        $('.nav__item').removeClass('black');
+    }
+}
+
+function allFunctions(){
+    visible(document.querySelector('.gallery'));
+    visible(document.querySelector('.reviews'));
+    visible(document.querySelector('.articles'));
+    visible(document.querySelector('.partners'));
+
+    changeColor(document.querySelector('.lastTwo'));
+}
+
+function toggleMenu(){
+    $('section:not(.menuNotOff)').toggle();
+    $('.index').hide();
+    
+    $('.indexMobile__menuBtn').toggleClass('active');
+
+    $('.indexMobile__top-bottom').fadeToggle();
+    $('.indexMobile__top-menu').fadeToggle();
+
+}
+
 //# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbnNvbGUuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoibWFpbi5qcyIsInNvdXJjZXNDb250ZW50IjpbIiJdfQ==
