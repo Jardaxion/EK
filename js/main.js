@@ -1,7 +1,7 @@
 $(document).ready(function () {
     sticky();
     allFunctions();
-    
+    scrollPochi();
     //Index hover
     $('.index__center').hover(function(){
         $('.index__left').addClass('disactive');
@@ -89,6 +89,7 @@ $(document).ready(function () {
 $(window).scroll(function(e){
     sticky();
     allFunctions();
+    scrollPochi();
 });
 
 function sticky(){
@@ -184,8 +185,22 @@ function toggleMenu(){
 function scrollHorizontally(e) {
     e = window.event || e;
     var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-    document.documentElement.scrollLeft -= (delta*300); // Multiplied by 40
-    document.body.scrollLeft -= (delta*300); // Multiplied by 40
-    e.preventDefault();
+    document.documentElement.scrollLeft -= (delta*100); // Multiplied by 40
+    document.body.scrollLeft -= (delta*100); // Multiplied by 40
+}
+
+//Скролл "Почитать"
+function scrollPochi(){
+    let widthToPochitat = $(window).width()*3.6;
+
+    if(widthToPochitat <= $(window).scrollLeft()){
+        $('.articles__title').css({
+            left: '36%',
+        })
+    } else {
+        $('.articles__title').css({
+            left: '0'
+        })
+    }
 }
 //# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbnNvbGUuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoibWFpbi5qcyIsInNvdXJjZXNDb250ZW50IjpbIiJdfQ==
