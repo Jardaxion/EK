@@ -308,7 +308,7 @@ main
             transform: translateX(-233px);
 
     border-radius: 0 41.5px 41.5px 0;
-    background: black;
+    background: #5EC647;
 
     -webkit-box-pack: end;
     -ms-flex-pack: end;
@@ -322,8 +322,6 @@ main
     -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
             transform: translateX(0);
-
-    background: #3c8143;
 }
 .whatsapp__inner:hover .whatsapp__text
 {
@@ -334,8 +332,6 @@ main
     -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
             transform: translateX(0);
-
-    background: #3c8143;
 }
 .whatsapp__inner.active .whatsapp__text
 {
@@ -438,7 +434,7 @@ main
 .index__background
 {
     position: absolute;
-    z-index: -1;
+    z-index: -2;
     top: 0;
     left: 0;
 
@@ -477,6 +473,25 @@ main
 
     opacity: 1;
 }
+.index__background-effect{
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    -webkit-transition: 1s all;
+         -o-transition: 1s all;
+            transition: 1s all;
+
+    opacity: 0;
+    background: rgba(0, 0, 0, .5);
+}
+.index__background.active + .index__background-effect{
+    opacity: 1;
+}
 .index__content
 {
     display: -webkit-box;
@@ -500,13 +515,11 @@ main
 }
 .index__text
 {
-    font-family: 'Miami';
-    font-size: 24px;
-    font-style: italic;
+    font-family: 'signpainter_housescript';
+    font-size: 32px;
+    letter-spacing: 0.07em;
 
     margin-top: 58px;
-
-    text-transform: uppercase;
 
     color: white;
 }
@@ -630,7 +643,8 @@ main
 .index__about-line4,
 .index__about-line5,
 .index__about-line6,
-.index__about-line7
+.index__about-line7,
+.index__about-line8
 {
     position: absolute;
 
@@ -642,7 +656,8 @@ main
 .index__about-line4 p,
 .index__about-line5 p,
 .index__about-line6 p,
-.index__about-line7 p
+.index__about-line7 p,
+.index__about-line8 p
 {
     font-family: 'GothamPro';
     font-size: 22px;
@@ -653,7 +668,7 @@ main
 
     text-transform: uppercase;
 
-    color: white;
+    color: #F6A967;
 }
 .index__about-line1
 {
@@ -661,7 +676,11 @@ main
 }
 .index__about-line2
 {
-    top: 557px;
+    top: 471px;
+}
+.index__about-line8{
+    top: 629px;
+    left: -42px;
 }
 .index__about-line3
 {
@@ -897,18 +916,6 @@ main
 .reviews__rightArrow
 {
     cursor: pointer;
-}
-.reviews__leftArrow path,
-.reviews__rightArrow path
-{
-    -webkit-transition: .3s all;
-         -o-transition: .3s all;
-            transition: .3s all;
-}
-.reviews__leftArrow:hover path,
-.reviews__rightArrow:hover path
-{
-    fill: #d98c49;
 }
 .reviews__leftArrow
 {
@@ -1385,7 +1392,10 @@ main
     }
     .index__about-line2
     {
-        top: 400px;
+        top: 383px;
+    }
+    .index__about-line8{
+        top: 522px;
     }
     .index__about-line3
     {
@@ -1480,6 +1490,10 @@ main
     {
         font-size: 16px;
     }
+    .index__about-line8 p
+    {
+        font-size: 16px;
+    }
     .index__about-line1
     {
         top: 288px;
@@ -1491,10 +1505,17 @@ main
     }
     .index__about-line2
     {
-        top: 467px;
-        left: -59px;
+        top: 404px;
+        left: -50px;
     }
     .index__about-line2 img
+    {
+        width: 336px;
+    }
+    .index__about-line8{
+        top: 497px;
+    }
+    .index__about-line8 img
     {
         width: 336px;
     }
@@ -1614,10 +1635,19 @@ main
     }
     .index__about-line2
     {
-        top: 387px;
+        top: 328px;
         left: 50px;
     }
     .index__about-line2 img
+    {
+        width: 312px;
+    }
+    .index__about-line8
+    {
+        top: 416px;
+        left: 38px;
+    }
+    .index__about-line8 img
     {
         width: 312px;
     }
@@ -1753,7 +1783,7 @@ main
     }
     .index__text
     {
-        font-size: 18px;
+        font-size: 24px;
     }
     .index__left-list
     {

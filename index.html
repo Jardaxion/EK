@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
@@ -19,13 +19,14 @@
     </div></a>
   <main class="main">
     <section class="index" id="index">
-      <div class="index__inner"><img class="index__background" src="img/index/background.png" alt="Задний фон">
+      <div class="index__inner">
+        <img class="index__background" src="img/index/background.png" alt="Задний фон">
+        <div class="index__background-effect"></div>
         <div class="index__content">
           <div class="index__left">
             <h1 class="index__title">Евгений <br> Корчагин</h1>
-            <p class="index__text">Ведуущий для значимых событий</p>
+            <p class="index__text">Ведущий для значимых событий</p>
             <ul class="index__left-list">
-              <li class="index__left-item"> <a class="index__left-link underline" href="#">Давайте знакомится</a></li>
               <li class="index__left-item"> <a class="index__left-link underline" href="#">Соц. сети</a></li>
               <li class="index__left-item"> <a class="index__left-link underline" href="#">Написать в WhatsApp</a></li>
             </ul>
@@ -34,17 +35,21 @@
             <h3 class="index__title">Обо мне</h3>
             <div class="index__about-content">
               <div class="index__about-line1">
-                <p>11 лет в профессии с 2009 года.</p><img src="img/index/line/line1.svg" alt="1">
+                <p>Веду мероприятия с 2009г.</p><img src="img/index/line/line1.svg" alt="1">
               </div>
               <div class="index__about-line2">
-                <p>2 высших образования</p><img src="img/index/line/line2.svg" alt="1">
+                <p>Режиссёрское образование</p><img src="img/index/line/line2.svg" alt="1">
+              </div>
+              <div class="index__about-line8">
+                <p>Режиссёрское образование</p><img src="img/index/line/line2.svg" alt="1">
               </div>
               <div class="index__about-line3">
                 <p>3 место TOP GORKO SOCHI 2017 г.</p><img src="img/index/line/line3.svg" alt="1">
               </div>
             </div>
           </div>
-          <div class="index__center"><img class="index__center-img" src="img/index/man.png" alt="">
+          <div class="index__center">
+            <img class="index__center-img" src="img/index/man.png" alt="">
             <svg class="index__center-effect" width="725" height="725" viewbox="0 0 1321 965" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g filter="url(#filter0_f_4_362)">
                 <circle cx="660.5" cy="503.5" r="360.5" fill="white" fill-opacity="0.29"></circle>
@@ -77,9 +82,7 @@
               <li class="index__right-item"><a class="index__right-link" href="#galleryDesk">Профтолио</a></li>
               <li class="index__right-item"><a class="index__right-link" href="#reviewsDesk">Отзывы</a></li>
               <li class="index__right-item"><a class="index__right-link" href="#articlesDesk">Статьи</a></li>
-              <li class="index__right-item"><a class="index__right-link" href="#partnersDesk">Контакты</a></li>
             </ul><a class="index__link" href=""><img class="index__link-img" src="img/phone.png" alt=""><span class="index__link-text"> 8 (800) 888-88-88</span></a>
-            <div class="index__line"><a class="index__line-link" href="">WhatsApp</a><a class="index__line-link" href="">Email</a>
             </div>
           </div>
         </div>
@@ -104,10 +107,8 @@
               <li class="indexMobile__item"><a class="indexMobile__link" href="#gallery">Портфолио</a></li>
               <li class="indexMobile__item"><a class="indexMobile__link" href="#reviews">Отзывы</a></li>
               <li class="indexMobile__item"><a class="indexMobile__link" href="#articlesDesk">Статьи</a></li>
-              <li class="indexMobile__item"><a class="indexMobile__link" href="#partnersDesk">Контакты</a></li>
             </ul>
             <ul class="indexMobile__nav">
-              <li class="indexMobile__item"><a class="indexMobile__link underline" href="1">Давайте знакомиться</a></li>
               <li class="indexMobile__item"><a class="indexMobile__link underline" href="2">Соц.сети</a></li>
               <li class="indexMobile__item"><a class="indexMobile__link underline" href="3">Написать в WhatsApp</a></li>
             </ul>
@@ -188,10 +189,10 @@
         </div>
         <div class="reviewsMobile__arrows">
           <svg class="reviewsMobile__leftArrow" width="32" height="16" viewbox="0 0 32 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0.292893 7.29289C-0.0976295 7.68341 -0.0976296 8.31658 0.292892 8.7071L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34314C8.46159 1.95262 8.46159 1.31945 8.07107 0.92893C7.68054 0.538406 7.04738 0.538406 6.65686 0.92893L0.292893 7.29289ZM32 7L1 7L1 9L32 9L32 7Z" fill="#ADADAD"></path>
+            <path d="M0.292893 7.29289C-0.0976295 7.68341 -0.0976296 8.31658 0.292892 8.7071L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34314C8.46159 1.95262 8.46159 1.31945 8.07107 0.92893C7.68054 0.538406 7.04738 0.538406 6.65686 0.92893L0.292893 7.29289ZM32 7L1 7L1 9L32 9L32 7Z" fill="#d98c49"></path>
           </svg>
           <svg class="reviewsMobile__rightArrow" width="32" height="16" viewbox="0 0 32 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M31.7071 8.70711C32.0976 8.31658 32.0976 7.68342 31.7071 7.29289L25.3431 0.928932C24.9526 0.538408 24.3195 0.538408 23.9289 0.928932C23.5384 1.31946 23.5384 1.95262 23.9289 2.34315L29.5858 8L23.9289 13.6569C23.5384 14.0474 23.5384 14.6805 23.9289 15.0711C24.3195 15.4616 24.9526 15.4616 25.3431 15.0711L31.7071 8.70711ZM0 9L31 9V7L0 7L0 9Z" fill="#ADADAD"></path>
+            <path d="M31.7071 8.70711C32.0976 8.31658 32.0976 7.68342 31.7071 7.29289L25.3431 0.928932C24.9526 0.538408 24.3195 0.538408 23.9289 0.928932C23.5384 1.31946 23.5384 1.95262 23.9289 2.34315L29.5858 8L23.9289 13.6569C23.5384 14.0474 23.5384 14.6805 23.9289 15.0711C24.3195 15.4616 24.9526 15.4616 25.3431 15.0711L31.7071 8.70711ZM0 9L31 9V7L0 7L0 9Z" fill="#d98c49"></path>
           </svg>
         </div>
       </div>
@@ -228,10 +229,10 @@
                 <p class="reviews__title">Отзывы</p>
                 <div class="reviews__arrows">
                   <svg class="reviews__leftArrow" width="32" height="16" viewbox="0 0 32 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.292893 7.29289C-0.0976295 7.68341 -0.0976296 8.31658 0.292892 8.7071L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34314C8.46159 1.95262 8.46159 1.31945 8.07107 0.92893C7.68054 0.538406 7.04738 0.538406 6.65686 0.92893L0.292893 7.29289ZM32 7L1 7L1 9L32 9L32 7Z" fill="#ADADAD"></path>
+                    <path d="M0.292893 7.29289C-0.0976295 7.68341 -0.0976296 8.31658 0.292892 8.7071L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34314C8.46159 1.95262 8.46159 1.31945 8.07107 0.92893C7.68054 0.538406 7.04738 0.538406 6.65686 0.92893L0.292893 7.29289ZM32 7L1 7L1 9L32 9L32 7Z" fill="#d98c49"></path>
                   </svg>
                   <svg class="reviews__rightArrow" width="32" height="16" viewbox="0 0 32 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M31.7071 8.70711C32.0976 8.31658 32.0976 7.68342 31.7071 7.29289L25.3431 0.928932C24.9526 0.538408 24.3195 0.538408 23.9289 0.928932C23.5384 1.31946 23.5384 1.95262 23.9289 2.34315L29.5858 8L23.9289 13.6569C23.5384 14.0474 23.5384 14.6805 23.9289 15.0711C24.3195 15.4616 24.9526 15.4616 25.3431 15.0711L31.7071 8.70711ZM0 9L31 9V7L0 7L0 9Z" fill="#ADADAD"></path>
+                    <path d="M31.7071 8.70711C32.0976 8.31658 32.0976 7.68342 31.7071 7.29289L25.3431 0.928932C24.9526 0.538408 24.3195 0.538408 23.9289 0.928932C23.5384 1.31946 23.5384 1.95262 23.9289 2.34315L29.5858 8L23.9289 13.6569C23.5384 14.0474 23.5384 14.6805 23.9289 15.0711C24.3195 15.4616 24.9526 15.4616 25.3431 15.0711L31.7071 8.70711ZM0 9L31 9V7L0 7L0 9Z" fill="#d98c49"></path>
                   </svg>
                 </div>
               </div>
