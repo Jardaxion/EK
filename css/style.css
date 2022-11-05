@@ -2483,6 +2483,11 @@ main
     {
         fill: #dab555;
     }
+    .videos{
+        width: 100%;
+        height: auto;
+        overflow:visible;
+    }
     .videos__content{
         flex-direction: column;
         align-items: center;
@@ -2622,6 +2627,18 @@ main
     .articlePage__arrow-text
     {
         font-size: 18px;
+    }
+
+    .videos__title,
+    .partners__title,
+    .reviewsMobile__title,
+    .indexMobile__bottom-title{
+        font-size: 64px;
+        line-height: 55px;
+    }
+
+    .articles__title{
+        font-size: 48px; 
     }
 }
 @media (max-width: 484px)
