@@ -2624,6 +2624,9 @@ main
 }
 @media (max-width: 558px)
 {
+    .indexMobile__bottom-title{
+        margin-bottom: 42px;
+    }
     .indexMobile__bottom-text{
         font-size: 14px;
     }
@@ -2634,6 +2637,9 @@ main
         border-radius: 3px;
         top: 3px;
         left: -23px;
+    }
+    .indexMobile__bottom-item:not(:last-of-type) {
+        margin-bottom: 35px;
     }
     .articlePage__arrow-text
     {
