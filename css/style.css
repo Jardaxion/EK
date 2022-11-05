@@ -2624,6 +2624,26 @@ main
 }
 @media (max-width: 484px)
 {
+    .indexMobile__menuBtn div
+    {
+        width: 51px;
+        height: 1px;
+
+        -webkit-transition: .3s all;
+             -o-transition: .3s all;
+                transition: .3s all;
+
+        background: white;
+    }
+    .indexMobile__menuBtn div:nth-of-type(2n)
+    {
+        margin: 1.5vh 0;
+    }
+    .indexMobile__menuBtn.active div:last-of-type {
+        -webkit-transform: rotate(315deg) translate(10px, -13px);
+        -ms-transform: rotate(315deg) translate(10px, -13px);
+        transform: rotate(315deg) translate(10px, -13px);
+    }
     .articles__content-title
     {
         width: auto;
