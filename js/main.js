@@ -165,14 +165,16 @@ function scrollHorizontally(e) {
 function scrollPochi(){
     let widthToPochitat = $(window).width()*4.6;
 
-    if(widthToPochitat <= $(window).scrollLeft()){
-        $('.articles__title').css({
-            left: '36%',
-        })
-    } else {
-        $('.articles__title').css({
-            left: '0'
-        })
+    if($(window).width() > 720){
+        if(widthToPochitat <= $(window).scrollLeft()){
+            $('.articles__title').css({
+                left: '36%',
+            })
+        } else {
+            $('.articles__title').css({
+                left: '0'
+            })
+        }
     }
 }
 //# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbnNvbGUuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoibWFpbi5qcyIsInNvdXJjZXNDb250ZW50IjpbIiJdfQ==

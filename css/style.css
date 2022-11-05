@@ -2328,6 +2328,8 @@ main
                 filter: grayscale(100%);
         -o-object-fit: cover;
            object-fit: cover;
+        -o-object-position: top;
+           object-position: top;
     }
     .galleryMobile__img:not(:last-of-type){
         margin-bottom: 28px;
@@ -2492,7 +2494,7 @@ main
         margin-bottom: 50px;
     }
     .video{
-        width: 95%;
+        width: 90%;
         max-width: none;
     }
     .video__title{
@@ -2534,6 +2536,7 @@ main
     .articles__title
     {
         text-align: center;
+        width: auto;
     }
     .articles__content
     {
