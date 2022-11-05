@@ -2629,7 +2629,7 @@ main
 {
     .indexMobile__menuBtn div
     {
-        width: 51px;
+        width: 39px;
         height: 1px;
 
         -webkit-transition: .3s all;
@@ -2640,12 +2640,12 @@ main
     }
     .indexMobile__menuBtn div:nth-of-type(2n)
     {
-        margin: 1.5vh 0;
+        margin: 1.7vh 0;
     }
     .indexMobile__menuBtn.active div:last-of-type {
-        -webkit-transform: rotate(315deg) translate(10px, -13px);
-        -ms-transform: rotate(315deg) translate(10px, -13px);
-        transform: rotate(315deg) translate(10px, -13px);
+        -webkit-transform: rotate(315deg) translate(8px, -8px);
+        -ms-transform: rotate(315deg) translate(8px, -8px);
+        transform: rotate(315deg) translate(8px, -8px);
     }
     .articles__content-title
     {
