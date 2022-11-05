@@ -2632,6 +2632,8 @@ main
         width: 10px;
         height: 10px;
         border-radius: 3px;
+        top: 3px;
+        left: -23px;
     }
     .articlePage__arrow-text
     {
