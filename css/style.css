@@ -2624,6 +2624,15 @@ main
 }
 @media (max-width: 558px)
 {
+    .indexMobile__bottom-text{
+        font-size: 14px;
+    }
+    .indexMobile__bottom-item::before{
+        content: '';
+        width: 10px;
+        height: 10px;
+        border-radius: 3px;
+    }
     .articlePage__arrow-text
     {
         font-size: 18px;
